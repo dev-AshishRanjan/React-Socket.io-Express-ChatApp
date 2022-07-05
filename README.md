@@ -1,7 +1,7 @@
 # React-Socket.io-Express-ChatApp
 A simple real-time chat application implementation using Socket.io, Node and React.
 
-![Screenshot of demo](./screenshot.png)
+![Screenshot of demo](./Screenshot.png)
 
 see a live demo [here](https://evening-coast-74033.herokuapp.com/)
 
