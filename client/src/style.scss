@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@500&family=Festive&family=Lobster+Two:wght@400;700&family=Roboto+Mono&family=Sirin+Stencil&family=Splash&family=Stylish&family=Supermercado+One&family=Ubuntu:wght@300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home{
+    @include flexCenter;
+    min-height:100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    // background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/jimbaran-beach-2211434_1920.jpg") no-repeat center center / cover;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://picsum.photos/1000") no-repeat center center / cover;
+    
+    .card{
+        @include flexCenter;
+        flex-direction: column;
+        // background: white;
+        border: 1.5px solid rgb(0, 255, 0);
+        backdrop-filter: blur(1rem);
+        padding:1rem;
+        border-radius: 0.5rem;
+        width: 27rem;
+        min-height: 20rem;
+        justify-content: space-evenly;
+
+        .title{
+            font-family: 'Supermercado One', cursive !important;
+            color: orange;
+            text-align: center;
+            font-size: 2rem;
+            padding: 1rem;
+            margin-bottom:2rem;
+            width: 90%;
+            border-bottom: 1px solid rgb(0,255,0);
+
+            svg{
+                font-size: 2.5rem;
+            }
+        }
+        .login{
+            @include flexCenter;
+            flex-direction: column;
+
+            input{
+                padding:0.5rem 1rem;
+                border: none;
+                outline: none;
+                border-radius: 0.2rem;
+                margin-bottom: 1rem;
+            }
+            input,button{
+                width: 60%;
+            }
+            #partition{
+                width: 100%;
+                // background: rgb(0,255,0);
+                border: 0.1px solid lime;
+                // border:none;
+                margin-bottom: 0.5rem;
+            }
+            .hr{
+                @include flexCenter;
+                color: white;
+                border: none;
+                outline: none;
+                gap: 0.5rem;
+                margin: 0.5rem 0;
+                font-size:0.7rem;
+
+                hr{
+                    width: 4rem;
+                    background: white;
+                }
+            }
+            span{
+                width:60%;
+            }
+            .kep-login-facebook{
+                width: 100%;
+            }
+        }
+        .chat{
+            background: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            
+
+            .liveChat{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid orange;
+                p{
+                    color: orange;
+                }
+                .logout{
+                    padding: 0.3rem;
+                    border-radius: 0.2rem;
+                    color: orange;
+                    border: 1px solid orange;
+                    cursor: pointer;
+                }
+            }
+
+            .msg_wrap{
+                @include flexCenter;
+                flex-direction: column;
+                justify-content: flex-start;
+                height:25rem;
+                width: 100%;
+                overflow-y: scroll;
+                // border-bottom: 1.5px solid black;
+                margin-bottom:0.5rem;
+                // background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://picsum.photos/1000") no-repeat center center / cover;
+                // background:url("../images/internet-3116062_1920.jpg") no-repeat center center / cover;
+
+                .join{
+                    padding: 0.2rem;
+                    background: rgb(70, 45, 45);
+                    color: white;
+                    font-size:0.7rem;
+                    border-radius: 0.2rem;
+                    margin-top: 0.5rem;
+                }
+                .left{
+                    width:100%;
+                    @include flexCenter;
+                    justify-content: flex-start;
+                    margin: 0.3rem 0;
+                    .first{
+                        @include flexCenter;
+                        align-items:flex-start;
+                        overflow: hidden;
+                        background: rgba(0, 78, 0, 0.5);
+                        padding: 0.5rem;
+                        border-radius: 2rem;
+                        border-top-left-radius:0;
+                        // max-width:85%;
+                        img{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius:50%;
+                            margin-right: 0.5rem;
+                        }
+                        div{
+                            @extend .first;
+                            border-radius: 1.5rem;
+                            border-top-left-radius:0;
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                            .username{
+                                font-size:0.6rem;
+                                width: 100%;
+                                text-align: left;
+                            }
+                            .time{
+                                font-size:0.5rem;
+                                width:90%;
+                                text-align:right;
+                            }
+                            div{
+                                background: rgba(0,70,0,0.8);
+                                color: #fff;
+                                margin: 0.5rem 0;
+                                border-radius: 0.5rem;
+                                border-top-left-radius:0;
+                                border-left: 2px solid white;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    @extend .left;
+                    width:100%;
+                    @include flexCenter;
+                    justify-content: flex-end;
+                    .first{
+                        background: rgba(223, 145, 0, 0.5);
+                        border-radius: 2rem;
+                        border-top-right-radius: 0;
+                        img{
+                            margin-right:0;
+                            margin-left: 0.5rem;
+                        }
+                        div{
+                            .username{
+                                text-align: right;
+                            }
+                            .time{
+                                text-align: left;
+                                margin-left: 10%;
+                            }
+                            div{
+                            background: rgb(155, 101, 0);
+                            border-radius: 0.5rem;
+                            border-top-right-radius:0;
+                            border: none;
+                            border-right: 2px solid white;
+                            }
+                        }
+                    }
+                }
+            }
+            .send{
+                width: 100%;
+                form{
+                    .message_input{
+                    width: 75%;
+                    padding: 0.5rem 0.5rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 0.5rem 0 0 0.5rem;
+                    background: white;
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid rgb(206, 206, 206);
+                    border-top: 1px solid white;
+                    }
+                    button{
+                        padding: 0.5rem 0.5rem;
+                        // width: 10%;
+                        width: 20%;
+                        background: white;
+                        border: none;
+                        border-radius: 0 0.5rem 0.5rem 0;
+                        border-bottom: 1px solid black;
+                        cursor: pointer;
+                    }
+                    // .file_input{
+                    //     display: inline-block;
+                    //     width: 10%;
+                    //     #file{
+                    //         opacity: 0;
+                    //         position: absolute;
+                    //         filter:alpha(opacity=0);
+                    //         width: 8%;
+
+                    //         a{
+                    //             text-decoration: none;
+                    //             width:9%;
+                    //             text-align: center;
+                    //             svg>path{
+                    //                 color: black;
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    .card{
+        width: 24rem !important;
+        min-height: 25rem;
+
+        .chat{
+            .msg_wrap{
+                height: 33rem !important;
+            }
+        }
+    }
+}
