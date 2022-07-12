@@ -3,7 +3,7 @@ A simple real-time chat application implementation using Socket.io, Node and Rea
 
 ![Screenshot of demo](./Screenshot.png)
 
-see a live demo [here](https://evening-coast-74033.herokuapp.com/)
+see a live demo [here](https://chatapp144.netlify.app/)
 
 ## Setup and run
 * Make sure you have port 3000 and 8002 free in your machine.
